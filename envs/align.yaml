@@ -1,0 +1,11 @@
+name: align
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bwa-mem2
+  - samtools
+  - fastp
+  - fastqc
+  - multiqc

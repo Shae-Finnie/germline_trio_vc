@@ -1,0 +1,9 @@
+name: vep
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - ensembl-vep
+  - cyvcf2
+  - pandas
