@@ -1,0 +1,126 @@
+# ACMG Secondary Findings v3.2 gene list
+# ACMG Secondary Findings Working Group et al. 2023 
+# https://www.gimjournal.org/article/S1098-3600(23)00879-1/fulltext
+#
+### Genes related to cancer phenotypes ###
+# Familial adenomatous polyposis
+APC
+# Familial medullary thyroid cancer/multiple endocrine neoplasia
+RET
+# Hereditary breast and/or ovarian cancer
+BRCA1
+BRCA2
+PALB2
+# Hereditary paraganglioma-pheochromocytoma syndrome
+SDHD
+SDHAF2
+SDHC
+SDHB
+MAX
+TMEM127
+# Juvenile polyposis syndrome 
+BMPR1A
+# Juvenile polyposis syndrome/hereditary hemorrhagic telangiectasia syndrome
+SMAD4
+# Li-Fraumeni syndrome
+TP53
+# Lynch syndrome (hereditary nonpolyposis colorectal cancer) 
+MLH1
+MSH2
+MSH6
+PMS2
+# Multiple endocrine neoplasia type 1
+MEN1
+# MUTYH-associated polyposis
+MUTYH
+# NF2-related schwannomatosis
+NF2
+# Peutz-Jeghers syndrome
+STK11
+# PTEN hamartoma tumor syndrome
+PTEN
+# Retinoblastoma
+RB1
+# Tuberous sclerosis complex
+TSC1
+TSC2
+# von Hippel-Lindau syndrome
+VHL
+# WT1-related Wilms tumor
+WT1
+### Genes related to cardiovascular phenotypes ###
+# Aortopathies
+FBN1
+TGFBR1
+TGFBR2
+SMAD3
+ACTA2
+MYH11
+# Arrhythmogenic right ventricular cardiomyopathy (a subcategory of arrhythmogenic cardiomyopathy)
+PKP2
+DSP
+DSC2
+TMEM43
+DSG2
+# Catecholaminergic polymorphic ventricular tachycardia
+RYR2
+CASQ2
+TRDN
+# DCM
+TNNT2
+LMNA
+FLNC
+TTN
+BAG3
+DES
+RBM20
+TNNC1
+# Ehlers-Danlos syndrome, vascular type 
+COL3A1
+# Familial hypercholesterolemia
+LDLR
+APOB
+PCSK9
+# Hypertrophic Cardiomyopathy (HCM)
+MYH7
+MYBPC3
+TNNI3
+TPM1
+MYL3
+ACTC1
+PRKAG2
+# LQTS types 1 and 2
+KCNQ1
+KCNH2
+# LQTS3; Brugada syndrome
+SCN5A
+# LQTS types 14-16
+CALM1
+CALM2
+CALM3
+### Genes related to inborn errors of metabolism phenotypes ###
+# Biotinidase deficiency
+BTD
+# Fabry disease
+GLA
+# Ornithine transcarbamylase deficiency
+OTC
+# Pompe disease 
+GAA
+### Genes related to miscellaneous phenotypes ###
+# Hereditary hemochromatosis
+HFE
+# Hereditary hemorrhagic telangiectasia
+ACVRL1
+ENG
+# Malignant hyperthermia
+RYR1
+CACNA1S
+# Maturity-onset of diabetes of the young
+HNF1A
+# RPE65-related retinopathy
+RPE65
+# Wilson disease
+ATP7B
+# Hereditary TTR amyloidosis
+TTR 

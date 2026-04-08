@@ -1,0 +1,58 @@
+# ── Project Configuration ──────────────────────────────────────────────────────
+# Central config file for the germline trio variant calling pipeline.
+# All scripts should source paths and parameters from here.
+
+# ── Samples ────────────────────────────────────────────────────────────────────
+samples:
+  proband:
+    id: HG005
+    role: son
+    sex: male
+    bam_url: "https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG005_NA24631_son/NHGRI_Illumina300X_Chinesetrio_novoalign_bams/HG005.GRCh38_full_plus_hs38d1_analysis_set_minus_alts.300x.bam"
+
+  father:
+    id: HG006
+    role: father
+    sex: male
+    bam_url: "https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG006_NA24694-huCA017E_father/NA24694_Father_HiSeq100x/NHGRI_Illumina100X_Chinesetrio_novoalign_bams/HG006.GRCh38_full_plus_hs38d1_analysis_set_minus_alts.100x.bam"
+
+  mother:
+    id: HG007
+    role: mother
+    sex: female
+    bam_url: "https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG007_NA24695-hu38168_mother/NA24695_Mother_HiSeq100x/NHGRI_Illumina100X_Chinesetrio_novoalign_bams/HG007.GRCh38_full_plus_hs38d1_analysis_set_minus_alts.100x.bam"
+
+# ── Reference Genome ───────────────────────────────────────────────────────────
+reference:
+  genome: "data/reference/GRCh38.fa"
+  dbsnp: "data/reference/dbsnp_146.hg38.vcf.gz"
+  mills_indels: "data/reference/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
+  known_snps: "data/reference/1000G_phase1.snps.high_confidence.hg38.vcf.gz"
+
+# ── Pipeline Parameters ────────────────────────────────────────────────────────
+params:
+  chromosome: "chr17"
+  min_base_quality: 20
+  min_map_quality: 20
+  min_depth: 10
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
+paths:
+  raw_data: "data/raw"
+  reference: "data/reference"
+  results: "results"
+  pedigree: "pedigree.ped"
+  gene_panel: "config/acmg_sf_v3.2_genes.txt"
+
+# ── Hard Filter Thresholds ────────────────────────────────────────────────────
+hard_filters:
+  snp:
+    QD: 2.0
+    FS: 60.0
+    MQ: 40.0
+    MQRankSum: -12.5
+    ReadPosRankSum: -8.0
+  indel:
+    QD: 2.0
+    FS: 200.0
+    ReadPosRankSum: -20.0
