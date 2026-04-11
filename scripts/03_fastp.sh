@@ -5,7 +5,7 @@
 # Adapter trimming and QC with fastp for samples HG005, HG006, HG007
 #
 # Env: Align
-# Usage: bash scripts/03_trim_qc.sh
+# Usage: bash scripts/03_fastp.sh
 # Run from germline_trio_vc/ root
 #
 
