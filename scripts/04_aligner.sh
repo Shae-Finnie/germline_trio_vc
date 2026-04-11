@@ -2,7 +2,7 @@
 #
 # 04_Aligner.sh
 # Aligns trimmed paired-end reads to GRCh38 using BWA-MEM2
-# Sorted outputs, marked duplicate BAMs ready for VC
+# Sorted outputs
 #
 # Env: Align
 # Usage: bash scripts /04_align.sh
@@ -20,7 +20,7 @@ REF="data/reference/chr17.fa"
 SAMPLES=("HG005" "HG006" "HG007")
 ROLES=("proband" "father" "mother")
 
-THREADS=4
+THREADS=8
 
 # Directory setup
 
@@ -43,16 +43,14 @@ for i in 0 1 2; do
     r2="${TRIMMED_DIR}/${sample}_R2_trimmed.fastq.gz"
 
     sorted_bam="${ALIGNED_DIR}/${sample}_sorted.bam"
-    markdup_bam="${ALIGNED_DIR}/${sample}_markdup.bam"
-    metrics="${ALIGNED_DIR}/${sample}_dup_metrics.txt"
 
     echo ""
     echo " ************************************** "
     echo " Sample: ${sample} (${role})"
     echo " ************************************** "
 
-    if [[ -f "${markdup_bam}" ]]; then
-        echo "[INFO] ${sample}: Markdup BAM already exists, skipping"
+    if [[ -f "${sorted_bam}" ]]; then
+        echo "[INFO] ${sample}: Sorted BAM already exists, skipping"
         continue
     fi
 
@@ -71,17 +69,7 @@ for i in 0 1 2; do
 
     samtools index "${sorted_bam}"
 
-    echo "[INFO] ${sample}: Marking duplicates..."
-    gatk MarkDuplicates \
-        -I "${sorted_bam}" \
-        -O "${markdup_bam}" \
-        -M "${metrics}" \
-        --REMOVE_DUPLICATES false \
-        --VALIDATION_STRINGENCY SILENT
-
-    samtools index "${markdup_bam}"
-
-    echo "[INFO] ${sample}: Done -> ${markdup_bam}"
+    echo "[INFO] ${sample}: Bam sorted -> ${sorted_bam}" 
 done
 
 echo ""
