@@ -13,7 +13,7 @@ set -euo pipefail
 
 # config 
 
-CRHOM="chr17"
+CHROM="chr17"
 RAW_DIR="data/raw"
 
 SAMPLES=("HG005" "HG006" "HG007")
