@@ -15,7 +15,7 @@ set -euo pipefail
 
 TRIMMED_DIR="data/trimmed"
 ALIGNED_DIR="data/aligned"
-REF="data/ref/GRCh38.fa"
+REF="data/reference/chr17.fa"
 
 SAMPLES=("HG005" "HG006" "HG007")
 ROLES=("proband" "father" "mother")
