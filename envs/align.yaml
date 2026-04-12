@@ -9,3 +9,5 @@ dependencies:
   - fastp
   - fastqc
   - multiqc
+  - bcftools
+  - wget
