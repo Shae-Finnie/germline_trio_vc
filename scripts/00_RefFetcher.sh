@@ -15,13 +15,13 @@ CHROM="chr17"
 mkdir -p "${REF_DIR}"
 
 # Download full VCFs + indexes
-echo "[INFO downloading dbSNP]"
-wget -q -P "${REF_DIR}" "https://ftp.ncbi.nih.gov/snp/latest_release/VCF/GCF_000001405.40.gz"
-wget -q -P "${REF_DIR}" "https://ftp.ncbi.nih.gov/snp/latest_release/VCF/GCF_000001405.40.gz.tbi"
+echo "[INFO] downloading dbSNP"
+curl -L -o "${REF_DIR}/GCF_000001405.40.gz" "https://ftp.ncbi.nih.gov/snp/latest_release/VCF/GCF_000001405.40.gz"
+curl -L -o "${REF_DIR}/GCF_000001405.40.gz.tbi" "https://ftp.ncbi.nih.gov/snp/latest_release/VCF/GCF_000001405.40.gz.tbi"
 
-wget -q -P "${REF_DIR}" "https://ddbj.nig.ac.jp/public/public-human-genomes/GRCh38/fasta/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
-wget -q -P "${REF_DIR}" "https://ddbj.nig.ac.jp/public/public-human-genomes/GRCh38/fasta/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi"
-echo "[INFO downloading Mills]"
+curl -L -o "${REF_DIR}/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz" "https://ddbj.nig.ac.jp/public/public-human-genomes/GRCh38/fasta/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
+curl -L -o "${REF_DIR}/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi" "https://ddbj.nig.ac.jp/public/public-human-genomes/GRCh38/fasta/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi"
+echo "[INFO] downloading Mills]"
 
 # Slice chr17 and index
 echo "[INFO] slicing ${CHROM} from dbSNP"
