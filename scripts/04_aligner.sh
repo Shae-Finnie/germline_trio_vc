@@ -5,7 +5,7 @@
 # Sorted outputs
 #
 # Env: Align
-# Usage: bash scripts /04_align.sh
+# Usage: bash scripts/04_align.sh
 # run in germline_trio_vc/
 # 
 
