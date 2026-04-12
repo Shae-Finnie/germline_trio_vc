@@ -34,7 +34,8 @@ echo " Output    : ${MARKEDDUP_DIR}"
 echo " Metrics   : ${METRICS_DIR}"
 echo " ************************************** "
 
-for i in "${!SAMPLES}"; do
+# For each sample, mark PCR/optical duplicates in the sorted BAM using GATK Markduplicates
+for i in "${!SAMPLES[@]}"; do
     sample="${SAMPLES[$i]}"
     role="${ROLES[$i]}"
 
@@ -46,3 +47,27 @@ for i in "${!SAMPLES}"; do
     echo " ************************************** "
     echo " Sample: ${sample} (${role})"
     echo " ************************************** "
+
+    if [[ -f "${OUTPUT}" ]]; then
+        echo "[INFO] ${sample}: Marked BAM already exists, skipping"
+        continue
+    fi
+
+# MarkDups flags duplicate reads in the sorted BAM, writes a metrics
+# file, auto-indexes the output and logs completion.
+ echo "[INFO] ${sample}: Marking duplicates..."
+    gatk MarkDuplicates \
+        -I "${INPUT}" \
+        -O "${OUTPUT}" \
+        -M "${METRICS}" \
+        --CREATE_INDEX true
+
+    echo "[INFO] ${sample}: Marked BAM -> ${OUTPUT}"
+done
+
+echo ""
+echo " ************************************** "
+echo " Mark duplicates complete."
+echo " Marked BAMs : ${MARKEDDUP_DIR}"
+echo " Metrics     : ${METRICS_DIR}"
+echo " ************************************** "
