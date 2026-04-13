@@ -22,4 +22,15 @@ __pycache__/
 # Root 
 germline_trio_vc.code-workspace
 
+# GenomicsDB datastore
+data/genomicsdb/
 
+# Intermediate pipeline dat
+data/bqsr/
+data/gvcf/
+data/marked/
+data/metrics/
+data/aligned/
+data/trimmed/
+data/raw/
+data/reference/
