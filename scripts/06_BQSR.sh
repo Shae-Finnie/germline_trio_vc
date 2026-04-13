@@ -11,3 +11,35 @@
 #
 
 set -euo pipefail 
+
+# Config
+
+MARKED_DIR="data/marked"
+BQSR_DIR="data/bqsr"
+REF="/data/reference/chr17.fa"
+
+DBSNP="data/reference/dbsnp_155.hg38.chr17.vcf.gz"
+MILLS="data/reference/Mills_and_1000G_gold_standard.indels.hg38.chr17.vcf.gz"
+
+SAMPLES=("HG005" "HG006" "HG007")
+ROLES=("proband" "father" "mother")
+
+# Dir setup
+
+mkdir -p "${BQSR_DIR}"
+
+# Main
+
+echo " ************************************** "
+echo " Step 6: Base Quality Score Recalibration"
+echo " Input   : ${MARKED_DIR}"
+echo " Output  : ${BQSR_DIR}"
+echo " ************************************** "
+
+for i in "${!SAMPLES[@]}"; do
+    sample="${SAMPLES[$i]}"
+    role="${ROLES[$i]}"
+
+    INPUT=
+    TABLE=
+    OUTPUT=
