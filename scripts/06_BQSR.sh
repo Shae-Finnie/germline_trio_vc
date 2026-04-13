@@ -15,7 +15,7 @@ set -euo pipefail
 
 MARKED_DIR="data/marked"
 BQSR_DIR="data/bqsr"
-REF="/data/reference/chr17.fa"
+REF="data/reference/chr17.fa"
 
 DBSNP="data/reference/dbsnp_155.hg38.chr17.vcf.gz"
 MILLS="data/reference/Mills_and_1000G_gold_standard.indels.hg38.chr17.vcf.gz"
