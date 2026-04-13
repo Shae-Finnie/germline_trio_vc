@@ -40,6 +40,8 @@ vep \
     --input_file "${INPUT}" \
     --output_file "${OUTPUT}" \
     --vcf \
+    --fasta "data/reference/chr17.fa" \
+    --use_given_ref \
     --compress_output bgzip \
     --stats_file "${STATS}" \
     --cache \
@@ -54,6 +56,7 @@ vep \
     --af_gnomadg \
     --filter_common \
     --force_overwrite
+    
 
 echo ""
 echo " ************************************** "
