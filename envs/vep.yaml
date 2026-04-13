@@ -7,3 +7,4 @@ dependencies:
   - ensembl-vep
   - cyvcf2
   - pandas
+  - bioconda::bcftools
