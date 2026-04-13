@@ -53,7 +53,6 @@ vep \
     --check_existing \
     --af_gnomadg \
     --filter_common \
-    --custom file="${ACMG_GENES}",short_name=ACMG,format=bed,type=overlap \
     --force_overwrite
 
 echo ""
@@ -62,3 +61,9 @@ echo " VEP annotation complete."
 echo " Annotated VCF : ${OUTPUT}"
 echo " Stats report  : ${STATS}"
 echo " ************************************** "
+
+# Open stats report in browser once complete
+if [[ -f "${STATS}" ]]; then
+    open "${STATS}"
+fi
+
