@@ -2,14 +2,14 @@
 
 This small project entails trio variant calling using the ACMG SF gene panel (https://www.gimjournal.org/article/S1098-3600(25)00101-7/fulltext) to identify any present variants on chromosome 17. 
 
-## Original Trio Links
+## Samples
 
-Proband
+Proband:
 https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG005_NA24631_son/HG005_NA24631_son_HiSeq_300x/NHGRI_Illumina300X_Chinesetrio_novoalign_bams/
 
-Father
+Father:
 https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG006_NA24694-huCA017E_father/NA24694_Father_HiSeq100x/NHGRI_Illumina100X_Chinesetrio_novoalign_bams/
 
-Mother
+Mother:
 https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG007_NA24695-hu38168_mother/NA24695_Mother_HiSeq100x/NHGRI_Illumina100X_Chinesetrio_novoalign_bams/
 
