@@ -58,9 +58,28 @@ with gzip.open(VEP_VCF, "rt") as vcf_in, gzip.open(OUTPUT, "wt") as vcf_out:
                         symbols.add(parts[csq_index])
 
         # Keep variant if any transcript overlaps an ACMG gene
+        # Keep variant if in ACMG gene and gnomAD AF <= 1%
         if symbols & acmg_genes:
-            vcf_out.write(line)
-            kept += 1
+            af_pass = True
+            for field in info.split(";"):
+                if field.startswith("CSQ="):
+                    for transcript in field[4:].split(","):
+                        parts = transcript.split("|")
+                        if csq_index is not None:
+                            try:
+                                af_idx = csq_fields.index("gnomADg_AF")
+                                af = parts[af_idx]
+                                if af and af != "." and float(af) > 0.01:
+                                    af_pass = False
+                                    break
+                            except (ValueError, IndexError):
+                                pass
+                if not af_pass:
+                    break
+
+            if af_pass:
+                vcf_out.write(line)
+                kept += 1
 
 print(f"[INFO] Total variants processed : {total}")
 print(f"[INFO] Variants in ACMG genes   : {kept}")
