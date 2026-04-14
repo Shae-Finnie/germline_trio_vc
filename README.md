@@ -15,4 +15,4 @@ https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG007_NA24695-hu381
 
 ## Example outputs
 
-https://github.com/Shae-Finnie/germline_trio_vc/data/results/vep/Acmg_report_example.png
+https://github.com/Shae-Finnie/germline_trio_vc/results/vep/Acmg_report_example.png
