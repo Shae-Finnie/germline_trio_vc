@@ -21,4 +21,7 @@ https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG007_NA24695-hu381
 
 ### VEP Stats Snippet
 
+![Variant Consequences](results/vep/var_consequences.png)
+
 ![VEP Stats Snippet](results/vep/chr17_polyphen.png)
+
