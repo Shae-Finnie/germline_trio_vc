@@ -15,6 +15,6 @@ https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG007_NA24695-hu381
 
 ## Example outputs
 
-![ACMG Report](results/vep/Acmg_report_example.png)
+![ACMG Report](https://raw.githubusercontent.com/Shae-Finnie/germline_trio_vc/main/results/vep/acmg_report_example.png)
 
-![VEP Stats Snippet](results/vep/Chr17_Polyphen.png)
+![VEP Stats Snippet](results/vep/chr17_polyphen.png)
