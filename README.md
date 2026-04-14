@@ -13,3 +13,6 @@ https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG006_NA24694-huCA0
 Mother:
 https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/ChineseTrio/HG007_NA24695-hu38168_mother/NA24695_Mother_HiSeq100x/NHGRI_Illumina100X_Chinesetrio_novoalign_bams/
 
+## Example outputs
+
+https://github.com/Shae-Finnie/germline_trio_vc/data/results/vep/Acmg_report_example.png

@@ -1,13 +1,13 @@
 #!/bin/bash
-# =================
+#
 # 01_downloader.sh
-# =================
+#
 # downloads chr17 reads from remote GIAB BAMs for samples "HG005" "HG006" "HG007"
 #
 # Env: Align
 # usage: bash scripts/01_downloader.sh
 # run from root germline_trio_vc/
-# =================
+# 
 
 set -euo pipefail
 
@@ -60,3 +60,4 @@ echo ""
 echo " ************************************** "
 echo " Download finished, BAMs are in: ${RAW_DIR}/bam/"
 echo " ************************************** "
+
