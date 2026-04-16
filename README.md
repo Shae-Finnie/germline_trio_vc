@@ -17,16 +17,31 @@ to flag medically actionable secondary findings.
 ## Structure 
 
 ```
-├── config/
-├── data/
-│   ├── raw/
-│   ├── reference/
-│   └── ...
-├── envs/
-├── results/
-│   ├── qc/
-│   └── vep/
-└── scripts/
+├── config
+│   ├── acmg_sf_v3.2_genes.txt
+│   └── config.yaml
+├── data
+│   ├── aligned
+│   ├── bqsr
+│   ├── genomicsdb
+│   ├── gvcf
+│   ├── marked
+│   ├── metrics
+│   ├── raw
+│   ├── reference
+│   ├── trimmed
+│   └── vcf
+├── envs
+│   ├── align.yaml
+│   ├── gatk.yaml
+│   ├── README.md
+│   └── vep.yaml
+├── germline_trio_vc.code-workspace
+├── README.md
+├── results
+│   ├── qc
+│   └── vep
+└── scripts
 ...
 ```
 
